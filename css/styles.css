@@ -1,0 +1,115 @@
+.card{
+    background-color: #a62122;
+    width: 250px;
+    color: #fff;
+    height: 390px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;        
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.card2{
+    background-color: #4bb7e6;
+    width: 250px;
+    color: #fff;
+    height: 390px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;        
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.oboje {
+    display: flex;
+    gap: 20px;
+}
+
+
+.obrazok {
+    width: 250px;
+    border-radius: 15px;
+}
+
+
+.textik{
+    font-size: 14px;
+
+}
+
+.btn3 {
+    flex: 1;        
+    text-align: center;
+    background-color: #171717;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 100;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid #171717;
+}
+
+ .btn3:hover {
+    background-color: #fff;
+    color: #171717;
+
+ }
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -15px; /* ⬆ posunie Buy Now vyššie */
+}
+
+
+.srdiecko {
+    width: 30px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 5%;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.srdiecko img {
+    width: 18px;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;             
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+}
+
+.card-footer img {
+    width: 18px;         
+    height: 18px;
+    opacity: 0.7;           
+} 
+
+
+.sep {
+    margin-top: 20px;
+    height: 0.5px;
+    width: auto;
+    background-color: #c2c2c2;
+} 
+
+
+
+
+
