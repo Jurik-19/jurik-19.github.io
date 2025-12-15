@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moje Portfólio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav>
+    <div class="links">
+      <a href="#about">O mne</a>
+      <a href="#projekty">Projekty</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </nav>
+
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.2
+  };
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+<script>
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    const offset = 70; 
+    window.scrollTo({
+      top: target.offsetTop - offset,
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
+
+<script>
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav .links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 80; // výška nav panela
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+
+
+
+
+  <div class="container">
+    <h1>Ahoj, som <span class="highlight">Juraj Kubík</span></h1>
+    <p>Som webový vývojár / dizajnér / tvorca.</p>
+    
+    <div class="links">
+      <a href="https://github.com/Jurik-19">GitHub</a>
+      <a href="https://www.instagram.com/sotous_jurik/">Instagram</a>
+    </div>
+  </div>
+
+
+  <section id="about" class="about">
+    <img src="img/skibidak.png" alt="Moja fotka">
+    <div class="about-text">
+      <h2>O mne</h2>
+      <p>
+        Som študent SPŠE Zochova na odbore Programovanie digitálnych technológii. Vo voľnom čase sa zaujímam o verejnú dopravu, fotografovanie a programovanie.
+      </p>
+    </div>
+  </section>
+
+    <section id="projekty" class="projekty">
+
+    <div class="about-text">
+      <h2>Projekty</h2>
+      <p>
+        Zatiaľ len táto stránka 🤷‍♂️.
+      </p>
+    </div>
+        <img src="img/projekty.png" alt="projektyfotka">
+  </section>
+
+    <section id="kontakt" class="kontakt">
+
+    <div class="about-text">
+        <h2>Kontakty</h2>
+        <p><b><span class="highlight">Mail</span></b>: jurajkubik@s.zochova.sk</p>
+        <p><b><span class="highlight">Discord</span></b>: @jurik_19
+    </div>
+
+  </section>
+</body>
+</html>
