@@ -34,7 +34,7 @@
   .container {
     height: auto;
     padding: 3rem 1rem;
-    padding-top: 80px; 
+    padding-top: 100px; 
   }
 
 
@@ -262,4 +262,5 @@ p {
 .kontakt-text p {
   font-size: 1.1rem;
   line-height: 1.5;
+
 }
